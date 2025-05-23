@@ -1,0 +1,4 @@
+disk_name = "vm-disco"
+machine_type = "e2-medium"
+static_ip_public = "104.154.96.151"
+vm_name = "vm-instance-exemplo"
