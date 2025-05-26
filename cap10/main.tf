@@ -14,3 +14,9 @@ module "subnetwork" {
     network = "tf-chapter10"
   
 }
+
+module "ip_externo" {
+    source = "./gcp-public-ip"
+    name = "ip-externo-modulo"
+  
+}
