@@ -70,11 +70,11 @@ variable "vpc_name" {
   
 # }
 
-# variable "ip_publico" {
-#     type = string
-#     default = "ipv4-address"
+variable "ip_publico" {
+    type = string
+    default = "ip-modulo"
   
-# }
+}
 
 variable "fw_name" {
     type = string
@@ -100,26 +100,30 @@ variable "source_ranges" {
   
 }
 
-# variable "vm_name" {
+variable "vm_name" {
+    type = string
+}
+
+variable "machine_type" {
+    type = string
+    default = "e2-medium"
+  
+}
+
+variable "allow_stopping_for_update" {
+    type = bool
+    default = true
+  
+}
+
+# variable "ssh-keys" {
 #     type = string
-#     default = "vm-instance-exemplo"
+#     default = "tux:${file("/home/emerson/4Linux/8740-524-ssh-keys/8740-524.pub")}"
   
 # }
 
-# variable "machine_type" {
-#     type = string
-#     default = "e2-medium"
+variable "image" {
+    type = string
+    default = "debian-cloud/debian-12"
   
-# }
-
-# variable "allow_stopping_for_update" {
-#     type = bool
-#     default = true
-  
-# }
-
-
-# # variable "allow_rule" {
-# #     type = list(number)
-# #     default = [ 22, 80 ]
-# # }
+}
