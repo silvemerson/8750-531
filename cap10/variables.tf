@@ -12,19 +12,19 @@ variable "default_region" {
   
 }
 
-# variable "zone" {
-#     description = "Variável da zona de dispinibilidade"
-#     type = string
-#     default = "us-central1-a"
+variable "zone" {
+    description = "Variável da zona de dispinibilidade"
+    type = string
+    default = "us-central1-a"
   
-# }
+}
 
-# variable "vpc_name" {
-#     description = "Nome da VPC"
-#     type = string
-#     default = "custom-vpc-aula04"
+variable "vpc_name" {
+    description = "Nome da VPC"
+    type = string
+    default = "custom-vpc-modulo"
   
-# }
+}
 
 # variable "bool_auto_create_subnetworks" {
 #     description = "Criar subnetes dinamicamente"
@@ -76,11 +76,11 @@ variable "default_region" {
   
 # }
 
-# variable "fw_name" {
-#     type = string
-#     default = "allow-ssh"
+variable "fw_name" {
+    type = string
+    default = "allow-ssh-modulo"
   
-# }
+}
 
 # variable "protocol_tipo" {
 #     type = string
@@ -94,11 +94,11 @@ variable "default_region" {
 #   }
 # }
 
-# variable "source_ranges" {
-#     type = list(string)
-#     default = [ "0.0.0.0/0" ]
+variable "source_ranges" {
+    type = list(string)
+    default = [ "0.0.0.0/0" ]
   
-# }
+}
 
 # variable "vm_name" {
 #     type = string
