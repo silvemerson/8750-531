@@ -19,12 +19,12 @@ variable "zone" {
   
 }
 
-variable "vpc_name" {
-    description = "Nome da VPC"
-    type = string
-    default = "custom-vpc-modulo"
+# variable "vpc_name" {
+#     description = "Nome da VPC"
+#     type = string
+#     default = "custom-vpc-modulo"
   
-}
+# }
 
 # variable "bool_auto_create_subnetworks" {
 #     description = "Criar subnetes dinamicamente"
@@ -33,13 +33,13 @@ variable "vpc_name" {
   
 # }
 
-variable "subnet_name" {
-    description = "Nome da nossa subnet"
-    type = string
-    default = "subnet-01"
+# variable "subnet_name" {
+#     description = "Nome da nossa subnet"
+#     type = string
+#     default = "subnet-01"
 
 
-}
+# }
 
 
 # variable "subnet_range" {
@@ -70,11 +70,11 @@ variable "subnet_name" {
   
 # }
 
-variable "ip_publico" {
-    type = string
-    default = "ip-modulo"
+# variable "ip_publico" {
+#     type = string
+#     default = "ip-modulo"
   
-}
+# }
 
 # variable "fw_name" {
 #     type = string
