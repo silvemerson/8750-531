@@ -1,0 +1,42 @@
+name: Terraform GCP Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+env: 
+   GCP_CRED: ${{ secrets.GCP_CRED}}
+
+jobs:
+  terraform:
+    name: Terraform GCP
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+      
+      - name: Inicializando Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Auth Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          project_id: 'gcp-4linux'
+          credentials_json: '${{ secrets.GCP_CRED}}'
+
+      - name: google cloud cli
+        uses: google-github-actions/setup-gcloud@v2
+      
+      - name: Terraform init
+        run: terraform init
+        working-directory: ./cap15
+
+      - name: Terraform Plan
+        run: terraform plan
+        working-directory: ./cap15
+
+      - name: Terraform apply
+        run: terraform apply -auto-approve
+        working-directory: ./cap15
